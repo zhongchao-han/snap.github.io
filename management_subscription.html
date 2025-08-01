@@ -40,8 +40,9 @@
             const submitButton = document.getElementById('submitButton');
             const messageArea = document.getElementById('messageArea');
 
-            // !!! 请将此URL替换为您的新云函数 'sendPortalLinkEmail' 的实际部署URL !!!
-            const API_ENDPOINT = 'https://YOUR_FUNCTION_REGION-YOUR_PROJECT_ID.cloudfunctions.net/sendPortalLinkEmail'; 
+            // --- 修改部分 ---
+            // URL已更新为您提供的地址
+            const API_ENDPOINT = 'https://us-central1-snapmarkup-license-server.cloudfunctions.net/sendPortalLinkEmail'; 
 
             portalForm.addEventListener('submit', async function(event) {
                 event.preventDefault();
@@ -60,7 +61,6 @@
                         body: JSON.stringify({ email: email })
                     });
 
-                    // 无论后端成功与否，都向用户显示通用成功消息，这是为了安全
                     messageArea.textContent = '如果该邮箱地址在我们的系统中存在，一封包含管理链接的邮件将在几分钟内送达。请检查您的收件箱和垃圾邮件文件夹。';
                     messageArea.className = 'message success';
                     messageArea.style.display = 'block';
