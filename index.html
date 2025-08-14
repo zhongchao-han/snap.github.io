@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>SnapMark | OCR Tool to Convert Screenshots to LaTeX, Markdown & More</title>
 
-  <meta name="description" content="Use SnapMark's OCR technology to instantly extract text, tables, and math equations from any screenshot. Convert images to clean Markdown, LaTeX, HTML, AsciiDoc, reStructuredText, and more.">
+  <meta name="description"
+    content="Use SnapMark's OCR technology to instantly extract text, tables, and math equations from any screenshot. Convert images to clean Markdown, LaTeX, HTML, AsciiDoc, reStructuredText, and more.">
 
   <meta property="og:title" content="SnapMark | OCR Tool to Convert Screenshots to LaTeX, Markdown & More">
-  <meta property="og:description" content="Effortlessly extract text, tables, and math from images and convert them into over a dozen formats, including Markdown, LaTeX, AsciiDoc, and reStructuredText.">
+  <meta property="og:description"
+    content="Effortlessly extract text, tables, and math from images and convert them into over a dozen formats, including Markdown, LaTeX, AsciiDoc, and reStructuredText.">
   <meta property="og:image" content="https://www.whatsnapai.com/ad_image_800_1.png">
   <meta property="og:url" content="https://www.whatsnapai.com/">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SnapMark | OCR Tool to Convert Screenshots to LaTeX, Markdown & More">
-  <meta name="twitter:description" content="Effortlessly extract text, tables, and math from images and convert them into over a dozen formats, including Markdown, LaTeX, AsciiDoc, and reStructuredText.">
+  <meta name="twitter:description"
+    content="Effortlessly extract text, tables, and math from images and convert them into over a dozen formats, including Markdown, LaTeX, AsciiDoc, and reStructuredText.">
   <meta name="twitter:image" content="https://www.whatsnapai.com/ad_image_800_1.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,226 +86,385 @@
   </script>
 
   <style>
-  /* --- Global Styles --- */
-  :root {
-    --primary-color: #0078d4; /* A nice, professional blue */
-    --dark-text: #2d3748;
-    --light-text: #4a5568;
-    --background-color: #f7fafc;
-    --card-background: #ffffff;
-    --border-color: #e2e8f0;
-  }
+    /* --- Global Styles --- */
+    :root {
+      --primary-color: #0078d4;
+      /* A nice, professional blue */
+      --dark-text: #2d3748;
+      --light-text: #4a5568;
+      --background-color: #f7fafc;
+      --card-background: #ffffff;
+      --border-color: #e2e8f0;
+    }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    background-color: var(--background-color);
-    color: var(--dark-text);
-    line-height: 1.7;
-  }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      background-color: var(--background-color);
+      color: var(--dark-text);
+      line-height: 1.7;
+    }
 
-  /* --- Layout & Typography --- */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+    /* --- Layout & Typography --- */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-  section {
-    padding: 60px 0;
-  }
+    section {
+      padding: 60px 0;
+    }
 
-  h1, h2, h3, h4 {
-    color: var(--dark-text);
-    font-weight: 700;
-    line-height: 1.3;
-  }
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--dark-text);
+      font-weight: 700;
+      line-height: 1.3;
+    }
 
-  h1 { font-size: 2.5rem; text-align: center; }
-  h2 { font-size: 2rem; text-align: center; margin-bottom: 40px; }
-  h3 { font-size: 1.5rem; }
-  p { font-size: 1.1rem; color: var(--light-text); }
-  a { color: var(--primary-color); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
 
-  /* --- Hero Section --- */
-  .hero {
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  .hero p {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 20px auto 30px auto;
-  }
-  .hero-image-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  }
-  .hero-image-wrapper {
-    padding: 10px;
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    flex: 1;
-    min-width: 280px; /* Ensures it doesn't get too squished on small screens */
-  }
-  .hero-image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    display: block; /* Prevent extra space below inline images */
-  }
-  .cta-link {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.2s;
-  }
-  .cta-link:hover {
-    background-color: #005a9e;
-    text-decoration: none;
-  }
-  .trial-note {
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: var(--light-text);
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 20px auto 30px auto;
+    }
+
+    .hero-image-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      /* Allows wrapping on smaller screens */
+    }
+
+    .hero-image-wrapper {
+      padding: 10px;
+      background-color: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      flex: 1;
+      min-width: 280px;
+      /* Ensures it doesn't get too squished on small screens */
+    }
+
+    .hero-image-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+      /* Prevent extra space below inline images */
+    }
+
+    /* --- OLD CTA Button (can be removed or kept for other links) --- */
+    .cta-link {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .cta-link:hover {
+      background-color: #005a9e;
+      text-decoration: none;
+    }
+
+    .trial-note {
       margin-top: 15px;
       font-size: 0.9rem;
       color: var(--light-text);
-  }
-
-  /* --- Features & Use Cases --- */
-  .features-grid, .use-cases-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 40px;
-  }
-  .feature-card, .use-case-card {
-    background-color: var(--card-background);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 30px;
-    text-align: center;
-    flex-basis: 30%;
-    min-width: 280px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .use-case-card img {
-    max-width: 100%;
-    border-radius: 4px;
-    margin-top: 20px;
-    border: 1px solid var(--border-color);
-  }
-
-  /* --- Pricing Section --- */
-  #pricing { background-color: #fff; }
-  .pricing-card {
-    max-width: 500px;
-    margin: 0 auto;
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 40px;
-    text-align: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  }
-  .pricing-card .price {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--dark-text);
-    margin: 10px 0;
-  }
-    .pricing-card .price span {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--light-text);
     }
-  .pricing-card .billing-model {
-    font-weight: 600;
-    color: var(--light-text);
-    margin-bottom: 30px;
-  }
-  .pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
-    text-align: left;
-  }
-  .pricing-card ul li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  .pricing-card ul li::before {
-    content: '✓';
-    color: #28a745; /* a nice green checkmark */
-    font-weight: 700;
-    margin-right: 10px;
-    float: left;
-  }
-  .trust-badge {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: var(--light-text);
-  }
 
-  /* --- FAQ Section --- */
-  .faq-item {
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 20px;
-  }
-  .faq-item h4 {
-    margin-bottom: 10px;
-  }
+    .social-proof-hero {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--light-text);
+    }
 
-  /* --- Footer --- */
-  footer {
-    background-color: #e2e8f0;
-    color: var(--light-text);
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 0.9rem;
-  }
-  footer p {
-    margin: 0 0 10px 0;
-    font-size: 0.9rem;
-  }
-  footer a {
-    color: var(--light-text);
-    font-weight: 600;
-  }
+    /* --- Features & Use Cases --- */
+    .features-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background-color: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      flex-basis: 30%;
+      min-width: 280px;
+    }
+
+    .use-cases-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .use-case-card {
+      background-color: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 30px;
+      text-align: left;
+      /* Changed for better code alignment */
+      flex-basis: 45%;
+      /* Adjusted for more space */
+      min-width: 320px;
+    }
+
+    .use-case-card h3 {
+      text-align: center;
+    }
+
+    .use-case-card p {
+      text-align: center;
+    }
+
+    .use-case-card img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-top: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .code-block {
+      background-color: #2d3748;
+      /* Dark background for code */
+      color: #f7fafc;
+      padding: 15px;
+      border-radius: 5px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      /* Allows wrapping of long lines */
+      word-wrap: break-word;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    /* --- Testimonials Section --- */
+    #testimonials {
+      background-color: #fff;
+    }
+
+    .testimonials-grid {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      flex-basis: 45%;
+      min-width: 300px;
+      background-color: var(--card-background);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 30px;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--light-text);
+      border-left: 3px solid var(--primary-color);
+      padding-left: 20px;
+    }
+
+    .testimonial-author {
+      text-align: right;
+      font-weight: 700;
+      margin-top: 20px;
+      color: var(--dark-text);
+    }
+
+    /* --- Pricing Section --- */
+    #pricing {
+      background-color: var(--background-color);
+    }
+
+    .pricing-card {
+      max-width: 500px;
+      margin: 0 auto;
+      border: 2px solid var(--primary-color);
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .value-anchor {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .pricing-card .price {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--dark-text);
+      margin: 10px 0;
+    }
+
+    .pricing-card .price span {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--light-text);
+    }
+
+    .pricing-card .billing-model {
+      font-weight: 600;
+      color: var(--light-text);
+      margin-bottom: 30px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+      text-align: left;
+    }
+
+    .pricing-card ul li {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      display: flex;
+      /* Use flexbox for alignment */
+      align-items: flex-start;
+    }
+
+    .pricing-card ul li::before {
+      content: '✓';
+      color: #28a745;
+      /* a nice green checkmark */
+      font-weight: 700;
+      margin-right: 10px;
+      /* Removed float, using flexbox alignment instead */
+    }
+
+    .trust-badge {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: var(--light-text);
+    }
+
+    /* --- FAQ Section --- */
+    .faq-item {
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+
+    .faq-item h4 {
+      margin-bottom: 10px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #e2e8f0;
+      color: var(--light-text);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 0 0 10px 0;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--light-text);
+      font-weight: 600;
+    }
   </style>
 </head>
+
 <body>
 
   <main>
     <section class="hero container">
       <h1>Extract Text & Formulas from any Screenshot</h1>
-      <p>SnapMark is a powerful OCR tool for Windows. It lets you instantly extract text, tables, and complex math equations from any screenshot and convert them into over a dozen formats including LaTeX, Markdown, HTML, AsciiDoc, XML, and reStructuredText.</p>
-      <a href="https://apps.microsoft.com/store/detail/9PMB1X34Z40F?cid=DevShareMCLPCS" class="cta-link">Free Download for Windows</a>
+      <p>SnapMark is a powerful OCR tool for Windows. It lets you instantly extract text, tables, and complex math
+        equations from any screenshot and convert them into over a dozen formats including LaTeX, Markdown, HTML,
+        AsciiDoc, XML, and reStructuredText.</p>
+
+      <a href="https://apps.microsoft.com/detail/9pmb1x34z40f?hl=en-US&gl=US"
+        aria-label="Get SnapMark from the Microsoft Store" style="display: inline-block; margin-top: 10px;">
+        <img src="https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png"
+          alt="Download SnapMark from the Microsoft Store" style="width: 180px; height: auto; border-radius: 8px;">
+      </a>
+
       <p class="trial-note">No credit card required, 10 free trials</p>
+
+      <p class="social-proof-hero">Join hundreds of developers and researchers who are saving time every day.</p>
+
       <div class="hero-image-container">
         <div class="hero-image-wrapper">
           <img src="https://www.whatsnapai.com/screenshot1.png" alt="SnapMark OCR software interface for Windows.">
         </div>
         <div class="hero-image-wrapper">
-          <img src="https://www.whatsnapai.com/screenshot2.png" alt="One-click copy of extracted text to multiple formats.">
+          <img src="https://www.whatsnapai.com/screenshot2.png"
+            alt="One-click copy of extracted text to multiple formats.">
         </div>
         <div class="hero-image-wrapper">
-          <img src="https://www.whatsnapai.com/screenshot3.png" alt="History panel showing past screenshot conversions.">
+          <img src="https://www.whatsnapai.com/screenshot3.png"
+            alt="History panel showing past screenshot conversions.">
         </div>
       </div>
     </section>
@@ -311,15 +474,18 @@
       <div class="features-grid">
         <div class="feature-card">
           <h3>1. Capture</h3>
-          <p>Easily capture any part of your screen with a hotkey—a formula from a research paper, a table from a PDF, or a paragraph of text.</p>
+          <p>Easily capture any part of your screen with a hotkey—a formula from a research paper, a table from a PDF,
+            or a paragraph of text.</p>
         </div>
         <div class="feature-card">
           <h3>2. Recognize</h3>
-          <p>Our powerful OCR engine instantly recognizes the content and intelligently structures it into clean, usable text.</p>
+          <p>Our powerful OCR engine instantly recognizes the content and intelligently structures it into clean, usable
+            text.</p>
         </div>
         <div class="feature-card">
           <h3>3. Copy & Paste</h3>
-          <p>One-click copy any output format you need and paste it directly into your editor or publishing platform.</p>
+          <p>One-click copy any output format you need and paste it directly into your editor or publishing platform.
+          </p>
         </div>
       </div>
     </section>
@@ -329,13 +495,47 @@
       <div class="use-cases-grid">
         <div class="use-case-card">
           <h3>Extract Math Equations to LaTeX</h3>
-          <p>Stop the tedious manual entry of equations. Use our OCR to grab any formula from a paper or website and get perfect LaTeX code in seconds.</p>
-          <img src="https://www.whatsnapai.com/ad_image_800_2.png" alt="A complex math equation extracted from an image and converted to perfect LaTeX code.">
+          <p>Stop the tedious manual entry of equations. Use our OCR to grab any formula from a paper or website and get
+            perfect LaTeX code in seconds.</p>
+          <img src="https://www.whatsnapai.com/latex_code.png"
+            alt="A complex math equation extracted from an image and converted to perfect LaTeX code.">
+          <div class="code-block">
+            \frac{\partial \mathcal{L}}{\partial W_j} = - \frac{1}{N} \sum_{i=1}^{N} \sum_{k \neq y_i} \mathbb{I}
+            (f(x_i; W)_k - f(x_i; W)_{y_i} + \Delta > 0) x_{ij}
+          </div>
         </div>
+
         <div class="use-case-card">
           <h3>Convert Image Tables to Markdown</h3>
-          <p>Easily extract tables from any screenshot or PDF into clean, structured Markdown, ready for your technical docs and blog posts.</p>
-          <img src="https://www.whatsnapai.com/ad_image_800_1.png" alt="A table in an image being extracted into clean Markdown format.">
+          <p>Easily extract tables from any screenshot or PDF into clean, structured Markdown, ready for your technical
+            docs and blog posts.</p>
+          <img src="https://www.whatsnapai.com/markdown_table.png"
+            alt="A table in an image being extracted into clean Markdown format.">
+          <div class="code-block">
+            | Feature | Free | Pro |
+            |------------|-------|-------|
+            | Captures | 10 | 100/day |
+            | Formats | Text | 11+ |
+            | Math OCR | No | Yes |
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2>Praised by Professionals</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-text">"This tool is a lifesaver. It saved me at least 3 hours on my last research
+              paper. A must-have for any LaTeX user.”</p>
+            <p class="testimonial-author">★★★★★<br>- Alex, PhD Student</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">"I was skeptical at first, but the Markdown table conversion is flawless. It's
+              now a permanent part of my documentation workflow."</p>
+            <p class="testimonial-author">★★★★★<br>- Ben, Software Developer</p>
+          </div>
         </div>
       </div>
     </section>
@@ -344,17 +544,20 @@
       <div class="container">
         <h2>Flexible Subscription Plan</h2>
         <div class="pricing-card">
+          <p class="value-anchor">Save hours of tedious work for less than the price of a coffee.</p>
           <h3>SnapMark Pro</h3>
           <p class="price">$2.99<span>/month</span></p>
           <p class="billing-model">Billed after 10 free trials, cancel anytime</p>
           <ul>
             <li>Up to 100 screen captures per day</li>
             <li>Advanced OCR for tables and math equations</li>
-            <li>Export to 11+ formats: Markdown, LaTeX, HTML, Text, AsciiDoc, Textile, bbCode, XML, SGML, wikiMarkup, and reStructuredText.</li>
+            <li>Export to 11+ formats: Markdown, LaTeX, HTML, Text, AsciiDoc, Textile, bbCode, XML, SGML, wikiMarkup,
+              and reStructuredText.</li>
             <li>Continuous version updates</li>
             <li>Priority email support</li>
           </ul>
-          <a href="https://pay.paddle.io/hsc_01k1n86j8asnyxjnkexm8m6xya_1x9et8994hydd1q07mhqx1f6c6b9ay32" target="_blank" class="cta-link">Upgrade to Pro</a>
+          <a href="https://pay.paddle.io/hsc_01k1n86j8asnyxjnkexm8m6xya_1x9et8994hydd1q07mhqx1f6c6b9ay32"
+            target="_blank" class="cta-link">Upgrade to Pro</a>
           <p class="trust-badge">Secure payment processing by our partner, Paddle.com.</p>
         </div>
       </div>
@@ -364,11 +567,14 @@
       <h2>Frequently Asked Questions</h2>
       <div class="faq-item">
         <h4>How is SnapMark priced?</h4>
-        <p>You can download and use SnapMark for free for 10 captures. After the trial ends, you can choose to subscribe to the Pro version to continue using all advanced features. We offer a flexible subscription plan that you can cancel at any time.</p>
+        <p>You can download and use SnapMark for free for 10 captures. After the trial ends, you can choose to subscribe
+          to the Pro version to continue using all advanced features. We offer a flexible subscription plan that you can
+          cancel at any time.</p>
       </div>
       <div class="faq-item">
         <h4>How do I receive my license key?</h4>
-        <p>After you complete your subscription, your license key will be sent to your email address immediately by our partner, Paddle.com.</p>
+        <p>After you complete your subscription, your license key will be sent to your email address immediately by our
+          partner, Paddle.com.</p>
       </div>
       <div class="faq-item">
         <h4>Which versions of Windows are supported?</h4>
@@ -376,8 +582,11 @@
       </div>
       <div class="faq-item">
         <h4>What if I get a new computer?</h4>
-        <p>Your Pro access is tied to your subscription. Simply install the software on your new computer and activate it with the same license key. Each subscription allows activation on a reasonable number of personal devices simultaneously. You can view and manage your activated devices at any time through our 'Manage License' page.</p>
-    </div>
+        <p>Your Pro access is tied to your subscription. Simply install the software on your new computer and activate
+          it with the same license key. Each subscription allows activation on a reasonable number of personal devices
+          simultaneously. You can view and manage your activated devices at any time through our 'Manage License' page.
+        </p>
+      </div>
     </section>
   </main>
 
@@ -388,7 +597,8 @@
         <a href="https://www.whatsnapai.com/terms_of_service.html">Terms of Service</a> |
         <a href="https://www.whatsnapai.com/privacy_policy.html">Privacy Policy</a> |
         <a href="https://www.whatsnapai.com/refund_policy.html">Refund Policy</a> |
-        <a href="https://customer-portal.paddle.com/login/cpl_01k1f723kfp8tmq6rn7d3yvwsv" target="_blank">Manage License</a>
+        <a href="https://customer-portal.paddle.com/login/cpl_01k1f723kfp8tmq6rn7d3yvwsv" target="_blank">Manage
+          License</a>
       </p>
       <p>Contact us: <a href="mailto:support@whatsnapai.com">support@whatsnapai.com</a></p>
       <p>&copy; 2025 SnapMark. All rights reserved.</p>
@@ -396,4 +606,5 @@
   </footer>
 
 </body>
+
 </html>
